@@ -1,0 +1,22 @@
+target_host=arm-linux-gnueabihf
+
+[settings]
+os=Linux
+arch=armv7hf
+compiler=clang
+compiler.version=11
+compiler.libcxx=libstdc++11
+build_type=Release
+[options]
+[build_requires]
+[env]
+CC=/usr/bin/clang
+CXX=/usr/bin/clang++
+CXXFLAGS="-target arm-linux-gnueabihf" 
+CFLAGS="-target arm-linux-gnueabihf" 
+CHOST=$target_host
+AR=$target_host-ar
+AS=$target_host-as
+RANLIB=$target_host-ranlib
+LD=$target_host-ld
+STRIP=$target_host-strip
