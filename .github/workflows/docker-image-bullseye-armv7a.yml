@@ -47,8 +47,8 @@ jobs:
           images: atom63/qt-docker  
           
           
-     - name: Build and push      
-       uses: docker/build-push-action@v2.6.1
+      - name: Build and push      
+        uses: docker/build-push-action@v2.6.1
        with:  
            platforms: linux/arm/v7
            file: ./armv7a/bullseye/Dockerfile
