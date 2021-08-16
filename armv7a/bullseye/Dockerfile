@@ -5,6 +5,15 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends \
     clang \
     ninja-build \
+    git \
+    locales \
+    sudo \
+    curl \
+    build-essential \
+    pkg-config \
+    python3 \
+    perl \
+    ca-certificates \  
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*    
 

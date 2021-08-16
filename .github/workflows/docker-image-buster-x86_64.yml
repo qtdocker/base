@@ -29,11 +29,11 @@ jobs:
       with:
           images: atom63/qt-docker 
           
-#    - name: Build and push      
-#      uses: docker/build-push-action@v2.6.1
-#      with:  
-#          file: ./x86_64/buster/Dockerfile
-#          context: .
-#          push: ${{ github.event_name != 'pull_request' }}
-#          tags: atom63/qt-docker:linux-buster-x86_64
-#          labels: ${{ steps.meta.outputs.labels }}
+    - name: Build and push      
+      uses: docker/build-push-action@v2.6.1
+      with:  
+          file: ./x86_64/buster/Dockerfile
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: atom63/qt-docker:linux-buster-x86_64
+          labels: ${{ steps.meta.outputs.labels }}
