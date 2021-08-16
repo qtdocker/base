@@ -1,6 +1,6 @@
 FROM multiarch/debian-debootstrap:armhf-buster
 
-AENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list
 
