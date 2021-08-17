@@ -1,12 +1,10 @@
-FROM multiarch/debian-debootstrap:armhf-buster
+FROM multiarch/debian-debootstrap:armhf-bullseye
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list
-
 RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends \
-    clang-11/buster-backports \
-    ninja-build/buster-backports \
+    clang \
+    ninja-build \
     git \
     locales \
     sudo \
@@ -24,10 +22,6 @@ RUN apt update  && apt install -y --no-install-recommends \
     libffi-dev \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
-
-RUN ln -s /usr/bin/clang++-11 /usr/bin/clang++
-
-RUN ln -s /usr/bin/clang-11 /usr/bin/clang
 
 ENV CC=/usr/bin/clang
 
