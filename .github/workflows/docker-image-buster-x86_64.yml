@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           
     - name: Extract metadata (tags, labels) for Docker
-      uses: docker/metadata-action@v3.4.1
+      uses: docker/metadata-action@v3.5.0
       id: meta
       with:
           images: atom63/qt-docker 
