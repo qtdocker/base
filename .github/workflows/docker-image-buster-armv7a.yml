@@ -48,7 +48,7 @@ jobs:
           
           
       - name: Build and push      
-        uses: docker/build-push-action@v2.6.1
+        uses: docker/build-push-action@v2.7.0
         with:  
           platforms: linux/arm/v7
           file: ./armv7a/buster/Dockerfile

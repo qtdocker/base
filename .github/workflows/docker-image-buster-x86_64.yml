@@ -30,7 +30,7 @@ jobs:
           images: atom63/qt-docker 
           
     - name: Build and push      
-      uses: docker/build-push-action@v2.6.1
+      uses: docker/build-push-action@v2.7.0
       with:  
           file: ./x86_64/buster/Dockerfile
           context: .
