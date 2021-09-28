@@ -24,6 +24,9 @@ RUN readelf -h a.out
 
 RUN rm main.cpp && rm a.out
 
+COPY --chown=user:user ./profiles/armhf ./.conan/profiles/
+
+RUN cp ./.conan/profiles/armhf ./.conan/profiles/default 
 
 
 
