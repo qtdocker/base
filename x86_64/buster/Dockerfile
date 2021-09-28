@@ -15,7 +15,8 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     pkg-config \
     python3 \
     perl \
-    ca-certificates \  
+    ca-certificates \ 
+    file \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*    
 
