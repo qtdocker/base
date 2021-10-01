@@ -17,12 +17,19 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     perl \
     ca-certificates \  
     file \
+    wget \
+    gnupg2 \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*    
 
+RUN wget -q -O - https://files.pvs-studio.com/etc/pubkey.txt | apt-key add -
+
+RUN wget -O /etc/apt/sources.list.d/viva64.list https://files.pvs-studio.com/etc/viva64.list    
+    
 RUN apt update  && apt install -y --no-install-recommends \
     libssl-dev \
     libffi-dev \
+    pvs-studio \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
 
