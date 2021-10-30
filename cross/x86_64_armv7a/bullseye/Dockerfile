@@ -18,7 +18,7 @@ RUN apt install -y libstdc++-10-dev:armhf \
 
 COPY ./src/main.cpp ./   
 
-RUN clang++  -target arm-linux-gnueabihf  main.cpp
+RUN clang++ --verbose -target arm-linux-gnueabihf  main.cpp
 
 RUN readelf -h a.out
 
