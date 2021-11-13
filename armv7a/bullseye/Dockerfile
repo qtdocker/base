@@ -73,3 +73,12 @@ USER user
 ENV PATH "$PATH:/home/user/.local/bin"
 
 RUN pip3 install conan
+
+RUN conan profile new default --detect
+RUN conan profile update settings.compiler.libcxx=libstdc++11 default
+
+RUN conan profile update settings.compiler=clang default
+RUN conan profile update settings.compiler.version=11 default
+
+RUN conan install cmake/3.21.4@ --build 
+

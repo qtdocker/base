@@ -79,3 +79,6 @@ RUN conan profile update settings.compiler.libcxx=libstdc++11 default
 # We have clang-11
 RUN conan profile update settings.compiler=clang default
 RUN conan profile update settings.compiler.version=11 default
+
+RUN conan install cmake/3.21.4@ --build 
+
