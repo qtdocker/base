@@ -28,5 +28,6 @@ COPY --chown=user:user ./profiles/armhf ./.conan/profiles/
 
 RUN cp ./.conan/profiles/armhf ./.conan/profiles/default 
 
+RUN conan install cmake/3.21.4@ --build 
 
 
