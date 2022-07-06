@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list
 
 RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends \
-    clang-11/buster-backports \
+    clang-11 \
     ninja-build/buster-backports \
     git \
     locales \
