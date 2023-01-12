@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           
     - name: Extract metadata (tags, labels) for Docker
-      uses: docker/metadata-action@v4.1.1
+      uses: docker/metadata-action@v4.2.0
       id: meta
       with:
           images: atom63/qt-docker 
@@ -54,7 +54,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           
     - name: Extract metadata (tags, labels) for Docker
-      uses: docker/metadata-action@v4.1.1
+      uses: docker/metadata-action@v4.2.0
       id: meta
       with:
           images: atom63/qt-docker 
