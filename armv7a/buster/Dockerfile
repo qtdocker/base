@@ -78,4 +78,4 @@ USER user
 
 ENV PATH "$PATH:/home/user/.local/bin"
 
-RUN pip3 install conan
+RUN pip3 install conan=="1.59.0"

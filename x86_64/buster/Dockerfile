@@ -78,7 +78,7 @@ USER user
 
 ENV PATH "$PATH:/home/user/.local/bin"
 
-RUN pip3 install conan
+RUN pip3 install conan=="1.59.0"
 
 RUN conan profile new default --detect
 RUN conan profile update settings.compiler.libcxx=libstdc++11 default
